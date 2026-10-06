@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Les meves faltes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>Les meves faltes</h1>
+      <p class="sub">Curs 2026-27 · màxim 15% de cada projecte · 3 retards = 1 h de falta</p>
+    </div>
+    <div class="global" id="global"></div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Projectes</h2>
+      <div class="cards" id="cards"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Calendari</h2>
+        <p class="hint">Toca un dia per apuntar una falta o un retard.</p>
+      </div>
+      <div id="calendar"></div>
+    </section>
+
+    <section>
+      <h2>Registre</h2>
+      <div id="log"></div>
+    </section>
+
+    <section class="tools">
+      <h2>Dades</h2>
+      <p class="hint">Tot es guarda només en aquest navegador. Exporta una còpia per passar-la a un altre dispositiu.</p>
+      <div class="row">
+        <button id="export" class="btn">Exportar còpia</button>
+        <label class="btn">Importar còpia<input type="file" id="import" accept="application/json" hidden></label>
+        <button id="reset" class="btn danger">Esborrar-ho tot</button>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="day">
+    <form method="dialog" class="dlg">
+      <div class="dlg-head">
+        <h3 id="day-title"></h3>
+        <button class="icon" value="close" aria-label="Tancar">✕</button>
+      </div>
+      <div id="day-body"></div>
+      <details class="edit">
+        <summary>Editar hores del dia (si la temporització ha canviat)</summary>
+        <div id="day-edit"></div>
+        <div class="row">
+          <button type="button" class="btn" id="edit-save">Desar hores</button>
+          <button type="button" class="btn ghost" id="edit-reset">Tornar a l'original</button>
+        </div>
+      </details>
+    </form>
+  </dialog>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
