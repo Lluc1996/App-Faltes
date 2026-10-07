@@ -70,6 +70,8 @@ h3 { font-size: 18px; font-weight: 700; }
   background: var(--band); color: var(--band-ink);
   box-shadow: 0 0 0 100vmax var(--band); clip-path: inset(0 -100vmax);
 }
+.brand { display: flex; align-items: center; gap: 18px; min-width: 0; }
+.logo { width: 88px; height: 88px; flex: none; border-radius: 50%; box-shadow: 0 0 0 3px var(--notpink); }
 .top h1 { color: var(--band-ink); text-transform: uppercase; }
 .top .sub { color: var(--band-ink); opacity: .8; }
 .global { font-size: 13px; color: var(--band-ink); opacity: .9; text-align: right; }
@@ -171,6 +173,8 @@ dialog::backdrop { background: rgba(5, 35, 103, .55); }
 
 @media (max-width: 560px) {
   h1 { font-size: 26px; }
+  .brand { gap: 12px; }
+  .logo { width: 64px; height: 64px; }
   .global { text-align: left; }
   .cell { min-height: 54px; padding: 4px; }
   .chip { font-size: 9px; padding: 1px 3px; }
