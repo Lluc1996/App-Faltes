@@ -55,7 +55,7 @@ function computeStats() {
     }
   }
   for (const s of Object.values(stats)) {
-    s.missed = s.hours + Math.floor(s.lates / LATES_PER_ABSENCE);
+    s.missed = s.hours + s.lates / LATES_PER_ABSENCE;
     s.limit = s.total * LIMIT;
     s.left = s.limit - s.missed;
     s.pct = s.total ? (s.missed / s.total) * 100 : 0;
@@ -99,7 +99,7 @@ function renderCards(stats) {
         <span>Faltades <b>${n1(s.missed)} / ${n1(s.limit)} h</b></span>
         <span>Et queden <b class="${s.level}">${leftTxt}</b></span>
         <span>Projecte <b>${s.total} h</b></span>
-        <span>Retards <b>${s.lates}</b>${s.lates % LATES_PER_ABSENCE ? ` (${s.lates % LATES_PER_ABSENCE}/3)` : ""}</span>
+        <span>Retards <b>${s.lates}</b>${s.lates ? ` (${n1(s.lates / LATES_PER_ABSENCE)} h)` : ""}</span>
       </div>
     </article>`;
   }).join("");

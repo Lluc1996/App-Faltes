@@ -3,7 +3,7 @@
 Web personal per portar el registre de faltes i retards per projecte (curs 2026-27).
 
 - Cada projecte permet faltar el **15%** de les seves hores.
-- **3 retards** en un projecte = **1 h** de falta d'aquell projecte.
+- Cada **retard** suma **⅓ h** de falta al seu projecte (2 retards = ⅔ h).
 - Les dades es guarden al navegador (`localStorage`). Fes servir *Exportar còpia* per guardar-les o passar-les a un altre dispositiu.
 
 Fitxers:
