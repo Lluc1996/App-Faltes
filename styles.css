@@ -1,52 +1,30 @@
 /* Identitat Can Colls: blau marí sobre blanc trencat, vermell per a l'èmfasi, Montserrat per a tot el text.
    Capçalera en bloc blau a tota amplada + cinta de text, com als manuals de marca. */
-html { color-scheme: light; }
-:root {
+/* Un sol tema: fons blau marí per a tothom, sigui quin sigui el mode clar/fosc del dispositiu. */
+:root, :root[data-theme="light"], :root[data-theme="dark"] {
   --marine: #0d469a;   /* MarineBlue */
   --naval: #052367;    /* NavalAir */
   --red: #9a1701;      /* RedRock */
   --graphite: #2b2b2d; /* Idunnow */
   --notpink: #f0eaef;  /* NotPink */
 
-  --bg: var(--notpink);
-  --surface: #f8f5f7;
-  --ink: var(--marine);
-  --strong: var(--naval);
-  --muted: #5b6e98;
-  --line: #c9d0e3;
-  --soft: #e3dce6;
+  --bg: #04173f;
+  --surface: #0a2656;
+  --ink: #e9e3ec;
+  --strong: #ffffff;
+  --muted: #9fb0d4;
+  --line: #1f3d75;
+  --soft: #11306a;
   --band: var(--marine);
   --band-ink: var(--notpink);
-  --ok: #257a46;
-  --warn: #a8690f;
-  --bad: var(--red);
-  --accent: var(--red);
+  --ok: #57c587;
+  --warn: #e5ad45;
+  --bad: #ef6a52;
+  --accent: #ef6a52;
   --radius: 4px;
 
   --font: "Montserrat", "Helvetica Neue", Arial, sans-serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #04173f;
-    --surface: #0a2656;
-    --ink: #e9e3ec;
-    --strong: #ffffff;
-    --muted: #9fb0d4;
-    --line: #1f3d75;
-    --soft: #11306a;
-    --band: var(--marine);
-    --band-ink: var(--notpink);
-    --ok: #57c587;
-    --warn: #e5ad45;
-    --bad: #ef6a52;
-    --accent: #ef6a52;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #04173f; --surface: #0a2656; --ink: #e9e3ec; --strong: #ffffff; --muted: #9fb0d4;
-  --line: #1f3d75; --soft: #11306a; --band: var(--marine); --band-ink: var(--notpink);
-  --ok: #57c587; --warn: #e5ad45; --bad: #ef6a52; --accent: #ef6a52; color-scheme: dark;
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
