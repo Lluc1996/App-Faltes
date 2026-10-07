@@ -3,14 +3,14 @@
 // Si alguna dada està malament, es pot corregir des de la web (Editar hores del dia).
 
 const PROJECTS = [
-  { id: "portfoli", name: "Portfoli", color: "#7c5cff" },
-  { id: "noves", name: "Noves tecs", color: "#0ea5e9" },
-  { id: "30xtu", name: "30xTu", color: "#14b8a6" },
-  { id: "monart", name: "Monar'T", color: "#f59e0b" },
-  { id: "equips", name: "Equips", color: "#84cc16" },
-  { id: "publi", name: "Publi", color: "#ef4444" },
-  { id: "llancament", name: "Llançament", color: "#ec4899" },
-  { id: "jpo", name: "JPO", color: "#6366f1" },
+  { id: "portfoli", name: "Portfoli", color: "#052367" },
+  { id: "noves", name: "Noves tecs", color: "#2f86c9" },
+  { id: "30xtu", name: "30xTu", color: "#2b2b2d" },
+  { id: "monart", name: "Monar'T", color: "#9a1701" },
+  { id: "equips", name: "Equips", color: "#5b7fb8" },
+  { id: "publi", name: "Publi", color: "#0d469a" },
+  { id: "llancament", name: "Llançament", color: "#c4492c" },
+  { id: "jpo", name: "JPO", color: "#1d6a8f" },
 ];
 
 const COURSE_START = "2026-09-14";
