@@ -64,7 +64,7 @@ function computeStats() {
   return stats;
 }
 
-const n1 = (x) => (Math.round(x * 10) / 10).toLocaleString("ca-ES");
+const n1 = (x) => x.toLocaleString("ca-ES", { maximumFractionDigits: 2 });
 
 // ── Render
 function render() {
