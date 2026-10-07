@@ -81,7 +81,7 @@ h3 { font-size: 18px; font-weight: 700; }
   border-block: 2px solid var(--marine);
   font: 800 15px/1 var(--font); text-transform: uppercase; letter-spacing: .02em;
 }
-.ticker span { display: inline-block; padding: 9px 0; animation: ticker 40s linear infinite; }
+.ticker span { display: inline-block; padding: 9px 0; animation: ticker 160s linear infinite; }
 @keyframes ticker { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .ticker span { animation: none; } }
 

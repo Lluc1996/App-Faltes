@@ -7,10 +7,10 @@ const PROJECTS = [
   { id: "noves", name: "Noves tecs", color: "#2f86c9" },
   { id: "30xtu", name: "30xTu", color: "#2b2b2d" },
   { id: "monart", name: "Monar'T", color: "#9a1701" },
-  { id: "equips", name: "Equips", color: "#5b7fb8" },
+  { id: "equips", name: "Equips", color: "#3f6e35" },
   { id: "publi", name: "Publi", color: "#0d469a" },
-  { id: "llancament", name: "Llançament", color: "#c4492c" },
-  { id: "jpo", name: "JPO", color: "#1d6a8f" },
+  { id: "llancament", name: "Llançament", color: "#9c6f12" },
+  { id: "jpo", name: "JPO", color: "#13706f" },
 ];
 
 const COURSE_START = "2026-09-14";
