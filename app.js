@@ -275,34 +275,43 @@ document.getElementById("log").addEventListener("click", (e) => {
   if (b) openDay(b.dataset.open);
 });
 
-// ── Exportar / importar / esborrar
+// ── Còpia de seguretat (text) / esborrar
+const msg = (t) => { document.getElementById("msg").textContent = t; };
+const backup = document.getElementById("backup");
+
 document.getElementById("export").addEventListener("click", () => {
-  const blob = new Blob([JSON.stringify(state, null, 2)], { type: "application/json" });
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = `faltes-${todayKey}.json`;
-  a.click();
-  URL.revokeObjectURL(a.href);
+  backup.value = JSON.stringify(state);
+  backup.select();
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(backup.value)
+      .then(() => msg("Còpia copiada. Guarda-la en una nota."))
+      .catch(() => msg("Selecciona el text i copia'l."));
+  } else msg("Selecciona el text i copia'l.");
 });
-document.getElementById("import").addEventListener("change", async (e) => {
-  const file = e.target.files[0];
-  if (!file) return;
+document.getElementById("import").addEventListener("click", () => {
   try {
-    const s = JSON.parse(await file.text());
+    const s = JSON.parse(backup.value);
     if (!s.absences || !s.overrides) throw new Error();
     state = s;
     save();
-    alert("Còpia importada.");
+    msg("Còpia restaurada.");
   } catch (err) {
-    alert("Aquest fitxer no és una còpia vàlida.");
+    msg("Aquest text no és una còpia vàlida. Enganxa el text que vas copiar.");
   }
-  e.target.value = "";
 });
-document.getElementById("reset").addEventListener("click", () => {
-  if (confirm("Segur que vols esborrar totes les faltes i canvis?")) {
+let resetArmed = null;
+document.getElementById("reset").addEventListener("click", (e) => {
+  if (resetArmed) {
+    clearTimeout(resetArmed);
+    resetArmed = null;
+    e.target.textContent = "Esborrar-ho tot";
     state = { absences: {}, overrides: {} };
     save();
+    msg("Tot esborrat.");
+    return;
   }
+  e.target.textContent = "Toca de nou per confirmar";
+  resetArmed = setTimeout(() => { resetArmed = null; e.target.textContent = "Esborrar-ho tot"; }, 4000);
 });
 
 render();

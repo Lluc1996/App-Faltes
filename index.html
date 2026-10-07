@@ -39,12 +39,14 @@
 
     <section class="tools">
       <h2>Dades</h2>
-      <p class="hint">Tot es guarda només en aquest navegador. Exporta una còpia per passar-la a un altre dispositiu.</p>
+      <p class="hint">Tot es guarda només en aquest navegador. Per fer còpia o passar-ho a un altre dispositiu: copia el text i enganxa'l allà.</p>
+      <textarea id="backup" rows="3" placeholder="Aquí apareix la còpia, o enganxa-hi una per restaurar-la"></textarea>
       <div class="row">
-        <button id="export" class="btn">Exportar còpia</button>
-        <label class="btn">Importar còpia<input type="file" id="import" accept="application/json" hidden></label>
+        <button id="export" class="btn">Copiar còpia</button>
+        <button id="import" class="btn">Restaurar còpia</button>
         <button id="reset" class="btn danger">Esborrar-ho tot</button>
       </div>
+      <p class="hint" id="msg" role="status"></p>
     </section>
   </main>
 

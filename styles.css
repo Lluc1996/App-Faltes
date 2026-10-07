@@ -1,3 +1,4 @@
+html { color-scheme: light; }
 :root {
   --bg: #f6f5f2;
   --surface: #ffffff;
@@ -23,11 +24,12 @@
     --warn: #f59e0b;
     --bad: #f87171;
     --accent: #f2f1ee;
+    color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #111014; --surface: #1b1a20; --ink: #f2f1ee; --muted: #9a99a3;
-  --line: #2c2b33; --soft: #24232a; --ok: #22c55e; --warn: #f59e0b; --bad: #f87171; --accent: #f2f1ee;
+  --line: #2c2b33; --soft: #24232a; --ok: #22c55e; --warn: #f59e0b; --bad: #f87171; --accent: #f2f1ee; color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -126,3 +128,6 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
   .chip { font-size: 9px; padding: 1px 3px; }
   .log-row .d { width: 80px; }
 }
+
+#backup { width: 100%; margin-top: 12px; font: 12px/1.4 ui-monospace, monospace; padding: 8px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); resize: vertical; }
+.btn:focus-visible, .cell:focus-visible, .step button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
