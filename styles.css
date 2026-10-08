@@ -54,6 +54,7 @@ h3 { font-size: 18px; font-weight: 700; }
 .top .sub { color: var(--band-ink); opacity: .8; }
 .social { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin: 8px 0 0; font-size: 13px; font-weight: 600; color: var(--band-ink); }
 .social .ig { flex: none; }
+.social .support { font-size: 11px; font-weight: 500; opacity: .75; }
 .social a { color: var(--band-ink); text-decoration: none; border-bottom: 1px solid transparent; }
 .social a:hover, .social a:focus-visible { border-bottom-color: var(--band-ink); outline: none; }
 .global { font-size: 13px; color: var(--band-ink); opacity: .9; text-align: right; }
