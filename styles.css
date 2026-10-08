@@ -52,6 +52,11 @@ h3 { font-size: 18px; font-weight: 700; }
 .logo { width: 88px; height: 88px; flex: none; border-radius: 50%; box-shadow: 0 0 0 3px var(--notpink); }
 .top h1 { color: var(--band-ink); text-transform: uppercase; }
 .top .sub { color: var(--band-ink); opacity: .8; }
+.social { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin: 8px 0 0; font-size: 13px; font-weight: 600; color: var(--band-ink); }
+.social .ig { flex: none; }
+.social a { color: var(--band-ink); text-decoration: none; border-bottom: 1px solid transparent; }
+.social a:hover, .social a:focus-visible { border-bottom-color: var(--band-ink); outline: none; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .global { font-size: 13px; color: var(--band-ink); opacity: .9; text-align: right; }
 .global strong { color: var(--band-ink); font-size: 30px; font-weight: 800; display: block; line-height: 1.1; font-variant-numeric: tabular-nums; }
 
