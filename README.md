@@ -18,3 +18,13 @@ Fitxers:
 4. En 1-2 minuts la web és a `https://lluc1996.github.io/App-Faltes/`.
 
 Cada `push` a aquesta branca actualitza la web automàticament.
+
+## El meu rebost (`casa/`)
+
+Llista de tot el que hi ha a casa: foto (feta amb el mòbil), nom i quantitat. Mateixa identitat Can Colls.
+
+- Toca el **+** de l'esquerra per fer o triar una foto. Toca el nom per editar-lo o eliminar-lo.
+- **Afegir una llista**: un producte per línia (`3 llet`, `ous 12`, `-2 iogurts`, `pa`). Si ja hi és, suma o resta; si no, l'afegeix.
+- Es guarda al navegador (`localStorage`), com la web de faltes.
+
+Adreça: `https://lluc1996.github.io/App-Faltes/casa/` (amb GitHub Pages apuntant a la branca on hi hagi la carpeta `casa/`).
