@@ -98,7 +98,7 @@ function renderCards(stats) {
       <div class="stats">
         <span>Faltades <b>${n1(s.missed)} / ${n1(s.limit)} h</b></span>
         <span>Et queden <b class="${s.level}">${leftTxt}</b></span>
-        <span>Projecte <b>${s.total} h</b></span>
+        <span>Fetes <b>${n1(s.done)} / ${s.total} h</b></span>
         <span>Retards <b>${s.lates}</b>${s.lates ? ` (${n1(s.lates / LATES_PER_ABSENCE)} h)` : ""}</span>
       </div>
     </article>`;
